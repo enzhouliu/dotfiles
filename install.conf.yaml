@@ -1,0 +1,13 @@
+- clean: ['~']
+- link:
+    ~/.gitconfig: gitconfig
+    ~/.gitignore_global: gitignore_global
+#    ~/.tmux.conf: tmux.conf
+#    ~/.tmux: tmux/
+    ~/.vim: vim/
+    ~/.vimrc: vimrc
+#    ~/.zsh: zsh/
+#    ~/.zshrc: zshrc
+
+- shell:
+    - [git submodule update --init --remote, Updating submodules]

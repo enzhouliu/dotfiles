@@ -1,0 +1,14 @@
+m/config/*
+vim/non_used/*
+vim/tmp/*
+vim/undo/*
+vim/tags/*
+vim/.netrwhist
+vim/.VimballRecord
+tmux/plugins/*
+!tmux/plugins/tpm
+*.swp
+*.out
+*.log
+*.pyc
+*~

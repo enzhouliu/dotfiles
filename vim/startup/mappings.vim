@@ -11,6 +11,7 @@
 "ino <right> <Nop>
 
 
+
 "" ============================================================================
 ""                           Insert Mode Mappings
 "" ============================================================================
@@ -22,6 +23,9 @@ inoremap {}     {}
 
 " Map jk to ESC for easy hand-positioning
 inoremap jk <esc>
+
+" Map SPACE to za toggle folding
+nnoremap <space> za
 
 "" F-Keys Mapping
 " Toggle paste mode
@@ -56,16 +60,15 @@ inoremap <F10> <ESC>[[oBAEL_LOG_SET_CATEGORY(LOG_CATEGORY);<ESC><C-o>
 nnoremap <F12> :YcmForceCompileAndDiagnostics<CR>
 nnoremap <leader>jd :YcmCompleter GoTo<CR>
 
-" Open Nerdtree in new tab
-nn <Leader>h :tabnew %:h<CR>
 
 " Tab handling shortcuts
-nn <C-Tab> :tabnext<CR>
-nn <C-S-Tab> :tabprevious<CR>
-no <C-S-Tab> :tabprevious<CR>
-no <C-Tab> :tabnext<CR>
-ino <C-S-Tab> <ESC>:tabprevious<CR>
-ino <C-Tab> <ESC>:tabnext<CR>
+" xterm does not work, since only send out Tab key (terminal issue)
+"nnoremap <C-Tab> :tabnext<CR>
+"nnoremap <C-S-Tab> :tabprevious<CR>
+"inoremap <C-S-Tab> <ESC>:tabprevious<CR>
+"inoremap <C-Tab> <ESC>:tabnext<CR>
+nnoremap <leader>tn :tabnext<CR>
+nnoremap <leader>tp :tabprevious<CR>
 
 " Open and source .vimrc and startup scripts
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
@@ -78,6 +81,8 @@ nnoremap <leader>ss :source ~/.vim/startup/settings.vim<cr>
 
 "Nerd Tree
 nnoremap <leader>nt :NERDTreeToggle<cr>
+" Open Nerdtree in new tab
+nnoremap <Leader>h :tabnew %:h<CR>
 
 " Paste with shift+ins
 map <S-Insert> <MiddleMouse>

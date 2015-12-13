@@ -1,10 +1,8 @@
 " .vimrc
 " vim:sw=2
 "
-" Mario Longobardi
-"
-" Thanks to Eric N. Vander Weele and Shawn Biddle for the inspiration :)
-"
+" Shijie Li
+" Thanks for Mario and Ben for the help
 
 "Load custom settings from separate files
 source ~/.vim/startup/functions.vim " User defined functions

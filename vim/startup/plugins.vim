@@ -14,6 +14,29 @@ Plugin 'VundleVim/Vundle.vim'
 "Plugin 'sjl/gundo.vim'
 
 Plugin 'luochen1990/rainbow'            " Rainbow parenthesis coloring
+let g:rainbow_active = 1
+let g:rainbow_conf = {
+            \   'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
+            \   'ctermfgs': ['lightblue', 'lightyellow', 'lightcyan', 'lightmagenta'],
+            \   'operators': '_,_',
+            \   'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
+            \   'separately': {
+            \       '*': {},
+            \       'tex': {
+            \           'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/'],
+            \       },
+            \       'lisp': {
+            \           'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick', 'darkorchid3'],
+            \       },
+            \       'vim': {
+            \           'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/', 'start=/{/ end=/}/ fold', 'start=/(/ end=/)/ containedin=vimFuncBody', 'start=/\[/ end=/\]/ containedin=vimFuncBody', 'start=/{/ end=/}/ fold containedin=vimFuncBody'],
+            \       },
+            \       'html': {
+            \           'parentheses': ['start=/\v\<((area|base|br|col|embed|hr|img|input|keygen|link|menuitem|meta|param|source|track|wbr)[ >])@!\z([-_:a-zA-Z0-9]+)(\s+[-_:a-zA-Z0-9]+(\=("[^"]*"|'."'".'[^'."'".']*'."'".'|[^ '."'".'"><=`]*))?)*\>/ end=#</\z1># fold'],
+            \       },
+            \       'css': 0,
+            \   }
+            \}
 
 " Smarter '.'
 "Plugin 'tpope/vim-repeat'
@@ -67,7 +90,7 @@ Plugin 'tpope/vim-fugitive'
 "Plugin 'gregsexton/gitv'
 
 " NERDTree for silesystem exploation
-"Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdtree'
 if g:platform == "AIX"
     let NERDTreeDirArrows=0
 endif
@@ -82,19 +105,18 @@ let g:ctrlp_custom_ignore = {
   \ }
 
 " NERDCommenter for easy commenting
-"Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdcommenter'
 
 " Airline for pretty status/tab lines
-"Plugin 'bling/vim-airline'
+Plugin 'bling/vim-airline'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#hunks#non_zero_only = 1 " git gutter
-if g:platform == "Linux" || g:platform == "SunOS"
+if g:platform == "Linux" || g:platform == "Darwin" || g:platform == "SunOS"
     " Use Patched fonts on Linux and Sun
     let g:airline_powerline_fonts = 1
 endif
 
 " Colorschemes
-Plugin 'nanotech/jellybeans.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'endel/vim-github-colorscheme'
 Plugin 'flazz/vim-colorschemes'
@@ -122,10 +144,10 @@ Plugin 'a.vim'
 "Plugin 'Lokaltog/vim-easymotion'
 
 " Easy Ctag explorer
-"Plugin 'majutsushi/tagbar'
+Plugin 'majutsushi/tagbar'
 
 " Tmux movement mappings
-"Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'christoomey/vim-tmux-navigator'
 
 " Linux-Only plug-ins
 if g:platform == "Linux" || g:platform == "Darwin"

@@ -1,5 +1,6 @@
 "General Settings
 
+let mapleader=","
 "" essential
 set nocompatible
 let g:platform = GetPlatform()
@@ -16,7 +17,7 @@ if exists("+autochdir")
 endif
 set wrapscan
 set incsearch
-"set hlsearch
+set hlsearch
 set smartcase
 
 "" displaying text
@@ -86,11 +87,12 @@ set cinwords=if,else,while,do
 set cinwords+=for,switch,case
 "
 "" folding
-set nofoldenable
+"set nofoldenable
 set foldmarker={,}
 set foldmethod=syntax
-set foldlevel=0
-set foldopen+=jump
+set foldlevel=1
+"set foldopen+=jump
+set foldopen=block,hor,insert,jump,mark,percent,quickfix,search,tag,undo
 
 "" reading and writing files
 set modeline

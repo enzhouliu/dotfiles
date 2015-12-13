@@ -1,4 +1,7 @@
-m/config/*
+vim/bundle/*
+!vim/bundle/Vundle.vim
+vim/backup/*
+vim/config/*
 vim/non_used/*
 vim/tmp/*
 vim/undo/*

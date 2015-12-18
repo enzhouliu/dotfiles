@@ -69,8 +69,8 @@ Plugin 'tpope/vim-fugitive'
 "Plugin 'phleet/vim-arcanist'
 
 " Doxygen comments
-"Plugin 'DoxygenToolkit.vim'
-"let g:DoxygenToolkit_authorName="Shijie Li <lishijie0602@gmail.com>"
+Plugin 'DoxygenToolkit.vim'
+let g:DoxygenToolkit_authorName="Shijie Li <lishijie0602@gmail.com>"
 
 " Clang format for C/C++/ObjC
 "Plugin 'kana/vim-operator-user'
@@ -81,10 +81,10 @@ Plugin 'tpope/vim-fugitive'
 "autocmd FileType c,cpp,objc map <buffer><Leader>x <Plug>(operator-clang-format)
 
 " Diff signs in gutter for Git index/working diffs
-"Plugin 'airblade/vim-gitgutter'
-"let g:gitgutter_realtime = 0
-"let g:gitgutter_eager = 0
-"let g:gitgutter_max_signs = 1000
+Plugin 'airblade/vim-gitgutter'
+let g:gitgutter_realtime = 0
+let g:gitgutter_eager = 0
+let g:gitgutter_max_signs = 1000
 
 " Git Exploration plugin
 "Plugin 'gregsexton/gitv'
@@ -135,7 +135,7 @@ if g:platform != "AIX"
 endif
 
 " ListToggle for display of quickfix/location list
-"Plugin 'Valloric/ListToggle'
+Plugin 'Valloric/ListToggle'
 
 " Alternate for C/C++ Header/Source navigation
 Plugin 'a.vim'
@@ -160,15 +160,15 @@ if g:platform == "Linux" || g:platform == "Darwin"
     let g:ycm_global_ycm_extra_conf = '~/.ycm_default_conf.py'
 
     " Show Location list output in airline
-"    Plugin 'asenac/vim-airline-loclist'
+    Plugin 'asenac/vim-airline-loclist'
     let g:airline#extensions#loclist#enabled = 1
 
     " Nice airline-like bash prompt
-"    Plugin 'edkolev/promptline.vim'
+    Plugin 'edkolev/promptline.vim'
     let g:promptline_theme = 'airline'
 
     " Nice airline-like tmux prompt
-    "Plugin 'edkolev/tmuxline.vim'
+    Plugin 'edkolev/tmuxline.vim'
 
     " Snippets
     Plugin 'SirVer/ultisnips'
@@ -191,7 +191,7 @@ call vundle#end()
 filetype plugin indent on
 
 " Configure Promptline Preset
-if g:platform == "Linux"
+if g:platform == "Linux" || g:platform == "Darwin"
     let g:promptline_preset = {
         \'a' : [ '%M' ],
         \'b' : [ promptline#slices#user() ],

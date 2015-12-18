@@ -11,7 +11,7 @@ source ~/.zsh/plugins.zsh
 source ~/.zsh/settings.zsh
 
 # Bootstrap
-source ~/.zsh/bootstrap.zsh
+#source ~/.zsh/bootstrap.zsh
 
 # Aliases
 source ~/.zsh/aliases.zsh

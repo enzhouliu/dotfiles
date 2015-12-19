@@ -38,6 +38,11 @@ let g:rainbow_conf = {
             \   }
             \}
 
+" vim and tmux integration
+Plugin 'benmills/vimux'
+let g:VimuxOrientation = "h"
+let g:VimuxHeight = "35"
+
 " Smarter '.'
 "Plugin 'tpope/vim-repeat'
 
@@ -74,10 +79,10 @@ let g:DoxygenToolkit_authorName="Shijie Li <lishijie0602@gmail.com>"
 
 " Clang format for C/C++/ObjC
 "Plugin 'kana/vim-operator-user'
-"Plugin 'rhysd/vim-clang-format'
+Plugin 'rhysd/vim-clang-format'
 " map to <Leader>cf in C++ code
-"autocmd FileType c,cpp,objc nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
-"autocmd FileType c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<CR>
+autocmd FileType c,cpp,objc nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
+autocmd FileType c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<CR>
 "autocmd FileType c,cpp,objc map <buffer><Leader>x <Plug>(operator-clang-format)
 
 " Diff signs in gutter for Git index/working diffs

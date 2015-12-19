@@ -12,23 +12,23 @@
     ~/.ycm_extra_conf.py: ycm_extra_conf.py
 - shell:
     - [git submodule update --init --recursive, Updating submodules]
-    #- 
-      #command: ./fonts/install.sh
-      #stdin: true
-      #stdout: true
-      #stderr: true
-    #- 
-      #command: vim +PluginInstall +qall
-      #stdin: true
-      #stdout: true
-      #stderr: true
-    #- 
-      #command: ~/.vim/bundle/YouCompleteMe/install.sh --clang-completer
-      #stdin: true
-      #stdout: true
-      #stderr: true
-    #- 
-      #command: ~/.tmux/install_plugins.sh
-      #stdin: true
-      #stdout: true
-      #stderr: true
+    - 
+      command: ./fonts/install.sh
+      stdin: true
+      stdout: true
+      stderr: true
+    - 
+      command: vim +PluginInstall +qall
+      stdin: true
+      stdout: true
+      stderr: true
+    - 
+      command: ~/.vim/bundle/YouCompleteMe/install.sh --clang-completer
+      stdin: true
+      stdout: true
+      stderr: true
+    - 
+      command: ~/.tmux/install_plugins.sh
+      stdin: true
+      stdout: true
+      stderr: true

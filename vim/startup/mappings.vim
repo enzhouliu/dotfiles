@@ -1,4 +1,4 @@
-" Mappings
+"Mappings
 
 "Kill the arrow keys to force practice with hjkl
 "no <up> <Nop>
@@ -60,6 +60,13 @@ inoremap <F10> <ESC>[[oBAEL_LOG_SET_CATEGORY(LOG_CATEGORY);<ESC><C-o>
 nnoremap <F12> :YcmForceCompileAndDiagnostics<CR>
 nnoremap <leader>jd :YcmCompleter GoTo<CR>
 
+
+" Vimux mapping
+nnoremap <Leader>rr :w<CR>:call VimuxRunCommand("./" . bufname("%"))<CR>
+nnoremap <Leader>vl :w<CR>:call VimuxRunCommand('(load "' . bufname("%") . '")')<CR>
+nnoremap <Leader>vr :w<CR>:VimuxRunLastCommand<CR>
+nnoremap <Leader>vv :w<CR>:VimuxPromptCommand<CR>
+nnoremap <Leader>vx :VimuxInterruptRunner<CR>
 
 " Tab handling shortcuts
 " xterm does not work, since only send out Tab key (terminal issue)

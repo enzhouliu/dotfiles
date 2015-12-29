@@ -1,4 +1,4 @@
-" Plugins and plugin configuration
+"" Plugins and plugin configuration
 
 set nocompatible
 filetype off
@@ -84,6 +84,8 @@ Plugin 'rhysd/vim-clang-format'
 autocmd FileType c,cpp,objc nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
 autocmd FileType c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<CR>
 "autocmd FileType c,cpp,objc map <buffer><Leader>x <Plug>(operator-clang-format)
+autocmd FileType python nnoremap <buffer><Leader>cf :<C-u>pyf /usr/local/bin/clang-format.py<CR>
+autocmd FileType python inoremap <Leader>cf <ESC>:pyf /usr/local/bin/clang-format.py<CR>i
 
 " Diff signs in gutter for Git index/working diffs
 Plugin 'airblade/vim-gitgutter'
@@ -137,6 +139,10 @@ if g:platform != "AIX"
     let g:syntastic_style_error_symbol = '✠✠'
     let g:syntastic_warning_symbol = '∆∆'
     let g:syntastic_style_warning_symbol = '≈≈'
+endif
+if g:platform == "Darwin"
+    let g:syntastic_cpp_compiler = 'g++'
+    let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
 endif
 
 " ListToggle for display of quickfix/location list
@@ -197,14 +203,15 @@ filetype plugin indent on
 
 " Configure Promptline Preset
 if g:platform == "Linux" || g:platform == "Darwin"
+    let g:promptline_powerline_symbols = 1 " 0 to diable the pwerline symbols
     let g:promptline_preset = {
         \'a' : [ '%M' ],
-        \'b' : [ promptline#slices#user() ],
-        \'c' : [ promptline#slices#cwd() ],
+        \'b' : [ promptline#slices#cwd({ 'dir_limit':1}) ],
         \'x' : [ promptline#slices#vcs_branch() ],
         \'y' : [ promptline#slices#git_status() ],
         \'z' : [ '%*' ],
         \'warn' : [ promptline#slices#last_exit_code() ]}
+        "\'b' : [ promptline#slices#user() ],
 endif
 
 " Brief help

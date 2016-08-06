@@ -179,40 +179,11 @@ if g:platform == "Linux" || g:platform == "Darwin"
 
     " Nice airline-like bash prompt
     Plugin 'edkolev/promptline.vim'
-    let g:promptline_powerline_symbols = 1
-    let g:promptline_theme = 'jelly'
-    let g:promptline_preset = {
-        \ 'a':  [ '%M' ],
-        \ 'b':  [ promptline#slices#cwd({'dir_limit':1}) ],
-        \ 'x':  [ promptline#slices#vcs_branch() ],
-        \ 'warn': [ promptline#slices#last_exit_code() ]}
-    " help - store the generated 'file', run it in zshrc
-    " :PromptlineSnapshot [file] [theme] [preset]
-        "\ 'a':  [ promptline#slices#host() ],
 
     " Nice airline-like tmux prompt
     Plugin 'edkolev/tmuxline.vim'
-    let g:tmuxline_powerline_separators = 1
-    let g:tmuxline_theme = 'jellybeans'
-    let g:tmuxline_separators = {
-        \ 'left': '',
-        \ 'left_alt': '>',
-        \ 'right': '',
-        \ 'right_alt': '<',
-        \ 'space' : ' '}
-    let g:tmuxline_preset = {
-        \ 'a'    :   '#[fg=colour231,bg=colour28] #S #[fg=colour22,bg=colour233,nobold,nounderscore,noitalics]',
-        \ 'cwin' :   '#[fg=colour39,bg=colour235] #I> #[fg=colour39,bg=colour235,nobold,noitalics] #W ',
-        \ 'win'  :   '#[fg=colour231,bg=colour233] #I> #[fg=colour231,bg=colour233,nobold,noitalics] #W ',
-        \ 'x'    :   '#[fg=colour39,bg=colour235,nobold,nounderscore,noitalics] %a %H:%M %Y-%m-%d',
-        \ 'y'    :   '#[fg=colour210,bg=colour231, italics] |Love TT|'}
-    " tmuxline command help 
-    " step 1) set the theme
-    " :Tmuxline [themem] [preset]
-    " step 2) generate scripts which can run in tmux.conf
-    ":TmuxlineSnapshot tmux_prompt.sh
 
-    " Snippets
+        " Snippets
     Plugin 'SirVer/ultisnips'
     Plugin 'honza/vim-snippets'
     " Trigger configuration. Do not use <tab>.
@@ -231,6 +202,41 @@ endif
 
 call vundle#end()
 filetype plugin indent on
+
+" =========== promptline config and help
+    " help - store the generated 'file', run it in zshrc
+    " :PromptlineSnapshot [file] [theme] [preset]
+    "
+let g:promptline_powerline_symbols = 1
+let g:promptline_theme = 'jelly'
+let g:promptline_preset = {
+    \ 'a':  [ '%M' ],
+    \ 'b':  [ promptline#slices#cwd({'dir_limit':1}) ],
+    \ 'x':  [ promptline#slices#vcs_branch() ],
+    \ 'warn': [ promptline#slices#last_exit_code() ]}
+
+" =========== tmuxline config and help
+    " tmuxline command help 
+    " step 1) set the theme
+    " :Tmuxline [themem] [preset]
+    " step 2) generate scripts which can run in tmux.conf
+    ":TmuxlineSnapshot tmux_prompt.sh
+    "
+let g:tmuxline_powerline_separators = 1
+let g:tmuxline_theme = 'jellybeans'
+let g:tmuxline_separators = {
+    \ 'left': '',
+    \ 'left_alt': '>',
+    \ 'right': '',
+    \ 'right_alt': '<',
+    \ 'space' : ' '}
+let g:tmuxline_preset = {
+    \ 'a'    :   '#[fg=colour231,bg=colour28] #S #[fg=colour22,bg=colour233,nobold,nounderscore,noitalics]',
+    \ 'cwin' :   '#[fg=colour39,bg=colour235] #I> #[fg=colour39,bg=colour235,nobold,noitalics] #W ',
+    \ 'win'  :   '#[fg=colour231,bg=colour233] #I> #[fg=colour231,bg=colour233,nobold,noitalics] #W ',
+    \ 'x'    :   '#[fg=colour39,bg=colour235,nobold,nounderscore,noitalics] %a %H:%M %Y-%m-%d',
+    \ 'y'    :   '#[fg=colour210,bg=colour231, italics] |Love TT|'}
+
 
 " Brief help for Vbundle
 " :PluginList          - list configured plugins

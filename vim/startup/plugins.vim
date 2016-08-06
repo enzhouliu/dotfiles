@@ -115,9 +115,12 @@ let g:ctrlp_custom_ignore = {
 Plugin 'scrooloose/nerdcommenter'
 
 " Airline for pretty status/tab lines
-Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+"Plugin '
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#hunks#non_zero_only = 1 " git gutter
+let g:airline_theme='base16_pop'
 if g:platform == "Linux" || g:platform == "Darwin" || g:platform == "SunOS"
     " Use Patched fonts on Linux and Sun
     let g:airline_powerline_fonts = 1
@@ -176,10 +179,38 @@ if g:platform == "Linux" || g:platform == "Darwin"
 
     " Nice airline-like bash prompt
     Plugin 'edkolev/promptline.vim'
-    let g:promptline_theme = 'airline'
+    let g:promptline_powerline_symbols = 1
+    let g:promptline_theme = 'jelly'
+    let g:promptline_preset = {
+        \ 'a':  [ '%M' ],
+        \ 'b':  [ promptline#slices#cwd({'dir_limit':1}) ],
+        \ 'x':  [ promptline#slices#vcs_branch() ],
+        \ 'warn': [ promptline#slices#last_exit_code() ]}
+    " help - store the generated 'file', run it in zshrc
+    " :PromptlineSnapshot [file] [theme] [preset]
+        "\ 'a':  [ promptline#slices#host() ],
 
     " Nice airline-like tmux prompt
     Plugin 'edkolev/tmuxline.vim'
+    let g:tmuxline_powerline_separators = 1
+    let g:tmuxline_theme = 'jellybeans'
+    let g:tmuxline_separators = {
+        \ 'left': '',
+        \ 'left_alt': '>',
+        \ 'right': '',
+        \ 'right_alt': '<',
+        \ 'space' : ' '}
+    let g:tmuxline_preset = {
+        \ 'a'    :   '#[fg=colour231,bg=colour28] #S #[fg=colour22,bg=colour233,nobold,nounderscore,noitalics]',
+        \ 'cwin' :   '#[fg=colour39,bg=colour235] #I> #[fg=colour39,bg=colour235,nobold,noitalics] #W ',
+        \ 'win'  :   '#[fg=colour231,bg=colour233] #I> #[fg=colour231,bg=colour233,nobold,noitalics] #W ',
+        \ 'x'    :   '#[fg=colour39,bg=colour235,nobold,nounderscore,noitalics] %a %H:%M %Y-%m-%d',
+        \ 'y'    :   '#[fg=colour210,bg=colour231, italics] |Love TT|'}
+    " tmuxline command help 
+    " step 1) set the theme
+    " :Tmuxline [themem] [preset]
+    " step 2) generate scripts which can run in tmux.conf
+    ":TmuxlineSnapshot tmux_prompt.sh
 
     " Snippets
     Plugin 'SirVer/ultisnips'
@@ -201,20 +232,7 @@ endif
 call vundle#end()
 filetype plugin indent on
 
-" Configure Promptline Preset
-if g:platform == "Linux" || g:platform == "Darwin"
-    let g:promptline_powerline_symbols = 1 " 0 to diable the pwerline symbols
-    let g:promptline_preset = {
-        \'a' : [ '%M' ],
-        \'b' : [ promptline#slices#cwd({ 'dir_limit':1}) ],
-        \'x' : [ promptline#slices#vcs_branch() ],
-        \'y' : [ promptline#slices#git_status() ],
-        \'z' : [ '%*' ],
-        \'warn' : [ promptline#slices#last_exit_code() ]}
-        "\'b' : [ promptline#slices#user() ],
-endif
-
-" Brief help
+" Brief help for Vbundle
 " :PluginList          - list configured plugins
 " :PluginInstall(!)    - install (update) plugins
 " :PluginSearch(!) foo - search (or refresh cache first) for foo

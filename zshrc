@@ -11,17 +11,14 @@ source ~/.zsh/plugins.zsh
 # Settings
 source ~/.zsh/settings.zsh
 
-
 # Bootstrap
 #source ~/.zsh/bootstrap.zsh
 
 # Aliases
 source ~/.zsh/aliases.zsh
 
-
 # Custom prompt
 source ~/.zsh/prompt.zsh
-
 
 # Allow local customizations in the ~/.zshrc_local_after file
 if [ -f ~/.zshrc_local_after ]; then

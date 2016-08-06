@@ -70,10 +70,6 @@ nnoremap <Leader>vx :VimuxInterruptRunner<CR>
 
 " Tab handling shortcuts
 " xterm does not work, since only send out Tab key (terminal issue)
-"nnoremap <C-Tab> :tabnext<CR>
-"nnoremap <C-S-Tab> :tabprevious<CR>
-"inoremap <C-S-Tab> <ESC>:tabprevious<CR>
-"inoremap <C-Tab> <ESC>:tabnext<CR>
 nnoremap <leader>tn :tabnext<CR>
 nnoremap <leader>tp :tabprevious<CR>
 

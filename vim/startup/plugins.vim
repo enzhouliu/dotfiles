@@ -139,8 +139,13 @@ let g:airline#extensions#hunks#non_zero_only = 1 " git gutter
 let g:airline_theme='base16_pop'
 if g:platform == "Linux" || g:platform == "Darwin" || g:platform == "SunOS"
     " Use Patched fonts on Linux and Sun
-    let g:airline_powerline_fonts = 1
+    "let g:airline_powerline_fonts = 1
 endif
+
+" disable dumb separators which need patched font
+let g:airline_left_sep=''
+let g:airline_right_sep=''
+
 
 " =========== tmuxline config and help
     " tmuxline command help 

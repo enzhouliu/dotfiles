@@ -32,7 +32,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'scrooloose/nerdtree'
 
 " ctrlP Plugin
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 " NERDCommenter for easy commenting
 Plugin 'scrooloose/nerdcommenter'
@@ -52,6 +52,10 @@ Plugin 'scrooloose/syntastic'
 " ListToggle for display of quickfix/location list
 Plugin 'Valloric/ListToggle'
 
+" ============== Programming related
+" scala plugin
+Plugin 'derekwyatt/vim-scala'
+
 " Alternate for C/C++ Header/Source navigation
 Plugin 'a.vim'
 
@@ -67,7 +71,7 @@ Plugin 'mhinz/vim-grepper'
 " Linux-Only plug-ins
 if g:platform == "Linux" || g:platform == "Darwin"
     " Autocompletion and semantic completion
-    Plugin 'Valloric/YouCompleteMe'
+    "Plugin 'Valloric/YouCompleteMe'
 
     " Show Location list output in airline
     Plugin 'asenac/vim-airline-loclist'
@@ -158,7 +162,7 @@ let g:tmuxline_preset = {
     \ 'cwin' :   '#[fg=colour39,bg=colour235] #I> #[fg=colour39,bg=colour235,nobold,noitalics] #W ',
     \ 'win'  :   '#[fg=colour231,bg=colour233] #I> #[fg=colour231,bg=colour233,nobold,noitalics] #W ',
     \ 'x'    :   '#[fg=colour39,bg=colour235,nobold,nounderscore,noitalics] %a %H:%M %Y-%m-%d',
-    \ 'y'    :   '#[fg=colour210,bg=colour231, italics] |Love TT|'}
+    \ 'y'    :   '#[fg=colour210,bg=colour231, italics] |#H|'}
 
 " =========== vimux config and help
 let g:VimuxOrientation = "h"
@@ -221,12 +225,13 @@ autocmd FileType python inoremap <Leader>cf <ESC>:pyf /usr/local/bin/clang-forma
 let g:DoxygenToolkit_authorName="Shijie Li <lishijie0602@gmail.com>"
 
 " =========== syntasticconfig and help
-if g:platform != "AIX"
-    let g:syntastic_error_symbol = '✗✗'
-    let g:syntastic_style_error_symbol = '✠✠'
-    let g:syntastic_warning_symbol = '∆∆'
-    let g:syntastic_style_warning_symbol = '≈≈'
-endif
+"if g:platform != "AIX"
+    "let g:syntastic_error_symbol = '✗✗'
+    "let g:syntastic_style_error_symbol = '✠✠'
+    "let g:syntastic_warning_symbol = '∆∆'
+    "let g:syntastic_style_warning_symbol = '≈≈'
+"endif
+
 if g:platform == "Darwin"
     let g:syntastic_cpp_compiler = 'g++'
     let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'

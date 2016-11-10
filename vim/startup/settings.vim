@@ -90,7 +90,7 @@ set cinwords+=for,switch,case
 "set nofoldenable
 set foldmarker={,}
 set foldmethod=syntax
-set foldlevel=1
+set foldlevel=20
 "set foldopen+=jump
 set foldopen=block,hor,insert,jump,mark,percent,quickfix,search,tag,undo
 
@@ -126,6 +126,7 @@ set gdefault
 
 "" set to use new tab
 set switchbuf+=usetab,newtab
+
 "" GVIM Settings
 if has('gui_running')
     set guioptions=acimg

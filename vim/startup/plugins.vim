@@ -61,6 +61,9 @@ Plugin 'majutsushi/tagbar'
 " Tmux movement mappings
 Plugin 'christoomey/vim-tmux-navigator'
 
+" vim/git-grep integration
+Plugin 'mhinz/vim-grepper'
+
 " Linux-Only plug-ins
 if g:platform == "Linux" || g:platform == "Darwin"
     " Autocompletion and semantic completion
@@ -244,3 +247,11 @@ let g:UltiSnipsEditSplit="vertical"
 
 " ===========  config and help
 let g:airline#extensions#loclist#enabled = 1
+ 
+" ===========  vim-grepper config
+"let g:grepper = {
+    "\ 'tools': ['git', 'grep'],
+    "\ 'open': 0,
+    "\ 'jump': 1,
+    "\ }
+"

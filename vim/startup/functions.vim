@@ -29,3 +29,10 @@ function GetPlatform()
         return "Unknown"
     endif
 endfunction
+
+" cd to the root directory of the current git repo
+function CdRoot()
+    cd %:h
+    exec "cd " . system("git rev-parse --show-toplevel")
+    pwd
+endfunction

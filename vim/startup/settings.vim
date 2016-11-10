@@ -124,6 +124,8 @@ set noexrc
 set secure
 set gdefault
 
+"" set to use new tab
+set switchbuf+=usetab,newtab
 "" GVIM Settings
 if has('gui_running')
     set guioptions=acimg

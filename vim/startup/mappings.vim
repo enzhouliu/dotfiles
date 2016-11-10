@@ -68,6 +68,8 @@ nnoremap <Leader>vr :w<CR>:VimuxRunLastCommand<CR>
 nnoremap <Leader>vv :w<CR>:VimuxPromptCommand<CR>
 nnoremap <Leader>vx :VimuxInterruptRunner<CR>
 
+" vim-grepper mapping
+nnoremap <Leader>gg :call CdRoot()<CR>:GrepperGit 
 " Tab handling shortcuts
 " xterm does not work, since only send out Tab key (terminal issue)
 nnoremap <leader>tn :tabnext<CR>

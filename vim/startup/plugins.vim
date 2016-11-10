@@ -206,6 +206,9 @@ let g:gitgutter_eager = 0
 let g:gitgutter_max_signs = 1000
 
 " =========== ctrip config and help
+set wildignore+=*.so,*.swp,*.zip
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']  " ignore files in .gitignore
+let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/]\.(git|hg|svn)$',
   \ 'file': '\v\.(exe|so|dll)$',

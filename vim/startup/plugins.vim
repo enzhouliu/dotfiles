@@ -7,83 +7,43 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" Let Vundle manage itself
-Plugin 'VundleVim/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim' " Let Vundle manage itself
+Plugin 'benmills/vimux'                 " vim and tmux integration
+Plugin 'tpope/vim-fugitive'             " Fugitive Git Wrapper
+Plugin 'christoomey/vim-tmux-navigator' " Tmux movement mappings
+Plugin 'mhinz/vim-grepper'              " vim/git-grep integration
+Plugin 'airblade/vim-gitgutter'         " Diff signs in gutter for Git index/working diffs
+Plugin 'ctrlpvim/ctrlp.vim'             " ctrlP Plugin
+Plugin 'scrooloose/nerdtree'            " NERDTree for filesystem exploation
+Plugin 'Valloric/ListToggle'            " ListToggle for display of quickfix/location list
+Plugin 'godlygeek/tabular'              " to align by a char
 
-" Rainbow parenthesis coloring
-Plugin 'luochen1990/rainbow'
-
-" vim and tmux integration
-Plugin 'benmills/vimux'
-
-" Fugitive Git Wrapper
-Plugin 'tpope/vim-fugitive'
-
-" Doxygen comments
-Plugin 'DoxygenToolkit.vim'
-
-" Clang format for C/C++/ObjC
-Plugin 'rhysd/vim-clang-format'
-
-" Diff signs in gutter for Git index/working diffs
-Plugin 'airblade/vim-gitgutter'
-
-" NERDTree for filesystem exploation
-Plugin 'scrooloose/nerdtree'
-
-" ctrlP Plugin
-Plugin 'ctrlpvim/ctrlp.vim'
-
-" NERDCommenter for easy commenting
-Plugin 'scrooloose/nerdcommenter'
-
-" Airline for pretty status/tab lines
-Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline' " Airline for pretty status/tab lines
 Plugin 'vim-airline/vim-airline-themes'
-
-" Colorschemes
-Plugin 'altercation/vim-colors-solarized'
+Plugin 'altercation/vim-colors-solarized' " Colorschemes
 Plugin 'endel/vim-github-colorscheme'
 Plugin 'flazz/vim-colorschemes'
 
-" Syntax checking
-Plugin 'scrooloose/syntastic'
 
-" ListToggle for display of quickfix/location list
-Plugin 'Valloric/ListToggle'
+Plugin 'scrooloose/syntastic'     " Syntax checking
+Plugin 'DoxygenToolkit.vim'       " Doxygen comments
+Plugin 'derekwyatt/vim-scala'     " scala plugin
+Plugin 'a.vim'                    " Alternate for C/C++ Header/Source navigation
+Plugin 'rhysd/vim-clang-format'   " Clang format for C/C++/ObjC
+Plugin 'luochen1990/rainbow'      " Rainbow parenthesis coloring
+Plugin 'scrooloose/nerdcommenter' " NERDCommenter for easy commenting
 
-" ============== Programming related
-" scala plugin
-Plugin 'derekwyatt/vim-scala'
+Plugin 'majutsushi/tagbar' " Easy Ctag explorer
 
-" Alternate for C/C++ Header/Source navigation
-Plugin 'a.vim'
 
-" Easy Ctag explorer
-Plugin 'majutsushi/tagbar'
-
-" Tmux movement mappings
-Plugin 'christoomey/vim-tmux-navigator'
-
-" vim/git-grep integration
-Plugin 'mhinz/vim-grepper'
 
 " Linux-Only plug-ins
 if g:platform == "Linux" || g:platform == "Darwin"
-    " Autocompletion and semantic completion
-    "Plugin 'Valloric/YouCompleteMe'
-
-    " Show Location list output in airline
-    Plugin 'asenac/vim-airline-loclist'
-
-    " Nice airline-like bash prompt
-    Plugin 'edkolev/promptline.vim'
-
-    " Nice airline-like tmux prompt
-    Plugin 'edkolev/tmuxline.vim'
-
-    " Snippets
-    Plugin 'SirVer/ultisnips'
+    "Plugin 'Valloric/YouCompleteMe'     " Autocompletion and semantic completion
+    Plugin 'asenac/vim-airline-loclist' " Show Location list output in airline
+    Plugin 'edkolev/promptline.vim'     " Nice airline-like bash prompt
+    Plugin 'edkolev/tmuxline.vim'       " Nice airline-like tmux prompt
+    Plugin 'SirVer/ultisnips'           " Snippets
     Plugin 'honza/vim-snippets'
 endif
 
@@ -102,7 +62,6 @@ endif
 "Plugin 'rhysd/clever-f.vim'
 "Plugin 'tpope/vim-repeat'
 "Plugin 'jlanzarotta/bufexplorer'
-"Plugin 'godlygeek/tabular'
 "Plugin 'tpope/vim-surround'
 "Plugin 'tpope/vim-speeddating'
 "Plugin 'tpope/vim-unimpaired'

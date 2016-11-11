@@ -1,4 +1,13 @@
 "" Plugins and plugin configuration
+"
+" Brief help for Vbundle
+" :PluginList          - list configured plugins
+" :PluginInstall(!)    - install (update) plugins
+" :PluginSearch(!) foo - search (or refresh cache first) for foo
+" :PluginClean(!)      - confirm (or auto-approve) removal of unused plugins
+"
+" see :h vundle for more details or wiki for FAQ
+" non-plugin staffs come after this line"
 
 set nocompatible
 filetype off
@@ -70,27 +79,24 @@ endif
 call vundle#end()
 filetype plugin indent on
 
-" Brief help for Vbundle
-" :PluginList          - list configured plugins
-" :PluginInstall(!)    - install (update) plugins
-" :PluginSearch(!) foo - search (or refresh cache first) for foo
-" :PluginClean(!)      - confirm (or auto-approve) removal of unused plugins
-"
-" see :h vundle for more details or wiki for FAQ
-" non-plugin staffs come after this line"
-
-
 " =========== promptline config and help
     " help - store the generated 'file', run it in zshrc
     " :PromptlineSnapshot [file] [theme] [preset]
     "
-let g:promptline_powerline_symbols = 1
-let g:promptline_theme = 'jelly'
-let g:promptline_preset = {
-    \ 'a':  [ '%M' ],
-    \ 'b':  [ promptline#slices#cwd({'dir_limit':1}) ],
-    \ 'x':  [ promptline#slices#vcs_branch() ],
-    \ 'warn': [ promptline#slices#last_exit_code() ]}
+let g:promptline_powerline_symbols = 0
+let g:promptline_theme             = 'jelly'
+let g:promptline_preset            = {
+    \ 'a'    : [ promptline#slices#host() ],
+    \ 'b'    : [ promptline#slices#cwd({'dir_limit'    : 1}), promptline#slices#vcs_branch() ],
+    \ 'warn' : [ promptline#slices#last_exit_code() ]}
+
+let g:promptline_symbols = {
+    \ 'left'       : '>',
+    \ 'left_alt'   : '>',
+    \ 'dir_sep'    : '/',
+    \ 'truncation' : '...',
+    \ 'vcs_branch' : '',
+    \ 'space'      : ''}
 
 " =========== vim-airline config and help
 let g:airline#extensions#tabline#enabled = 1

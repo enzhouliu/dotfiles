@@ -8,8 +8,8 @@
     ~/.vimrc: vimrc
     ~/.zsh: zsh/
     ~/.zshrc: zshrc
+    ~/.bash: bash/
     ~/.bashrc: bashrc
-    ~/.bash_prompt.sh: bash_prompt.sh
     ~/.ycm_extra_conf.py: ycm_extra_conf.py
 
 - shell:

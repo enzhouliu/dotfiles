@@ -15,7 +15,10 @@ fi
 source ~/.zsh/aliases.zsh
 
 # Custom prompt
-#source ~/.zsh/prompt.zsh
+# Format the prompt
+#function EXT_COLOR () { echo -ne "\[\033[38;5;$1m\]";COL_COLOR="\[\033[0m\]"; }
+#PS1='\[\e[1;32m\][\u@\h \w]\$\[\e[0m\] '
+# moved to bashrc_local_after
 
 # Allow local customizations in the ~/.bashrc_local_after file
 if [ -f ~/.bashrc_local_after ]; then

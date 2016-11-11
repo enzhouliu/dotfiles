@@ -18,7 +18,7 @@ source ~/.zsh/settings.zsh
 source ~/.zsh/aliases.zsh
 
 # Custom prompt
-#source ~/.zsh/prompt.zsh
+source ~/.zsh/prompt.zsh
 
 # Allow local customizations in the ~/.zshrc_local_after file
 if [ -f ~/.zshrc_local_after ]; then

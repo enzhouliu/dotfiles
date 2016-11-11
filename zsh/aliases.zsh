@@ -1,19 +1,17 @@
-# Use colors in coreutils utilities output
-alias grep='grep --color'
 
-# ls aliases
-alias ll='ls -lah'
-alias la='ls -A'
-alias l='ls'
-alias g="git"
-# Aliases to protect against overwriting
+alias ls='ls --color=auto'
+alias ll='ls -lht --color=auto'
+alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+alias mkdir='mkdir -p'
+alias ssh='TERM=xterm ssh'
+alias vi='vim'
+alias g='git'
 
-# git related aliases
-alias gag='git exec ag'
-
-# Update dotfiles
 function dfu() {
     (
         cd ~/.dotfiles && git pullff && ./install -q

@@ -136,10 +136,9 @@ let g:tmuxline_preset = {
 
 " =========== vimux config and help
 let g:VimuxOrientation = "h"
-let g:VimuxHeight = "35"
+let g:VimuxHeight = "20"
 
 " =========== nerdtree config and help
-let g:VimuxOrientation = "h"
 if g:platform == "AIX"
     let NERDTreeDirArrows=0
 endif

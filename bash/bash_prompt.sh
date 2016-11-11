@@ -42,7 +42,7 @@ function __promptline_ps1 {
 }
 function __promptline_vcs_branch {
   local branch
-  local branch_symbol=""
+  local branch_symbol="-"
 
   # git
   if hash git 2>/dev/null; then

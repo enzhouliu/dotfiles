@@ -95,7 +95,7 @@ let g:promptline_symbols = {
     \ 'left_alt'   : '>',
     \ 'dir_sep'    : '/',
     \ 'truncation' : '...',
-    \ 'vcs_branch' : '',
+    \ 'vcs_branch' : '-',
     \ 'space'      : ''}
 
 " =========== vim-airline config and help

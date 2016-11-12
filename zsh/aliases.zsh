@@ -1,6 +1,6 @@
 
 alias ls='ls --color=auto'
-alias ll='ls -lht --color=auto'
+alias ll='ls -lht'
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
@@ -11,6 +11,11 @@ alias mkdir='mkdir -p'
 alias ssh='TERM=xterm ssh'
 alias vi='vim'
 alias g='git'
+
+if [[ $(uname) == "Darwin" ]]; then
+    alias ls='ls -G'
+    alias ll='ls -alt'
+fi
 
 function dfu() {
     (

@@ -82,11 +82,12 @@ filetype plugin indent on
 " =========== promptline config and help
     " help - store the generated 'file', run it in zshrc
     " :PromptlineSnapshot [file] [theme] [preset]
+    " for linux: \ 'a'    : [ promptline#slices#host() ],
     "
 let g:promptline_powerline_symbols = 0
 let g:promptline_theme             = 'jelly'
 let g:promptline_preset            = {
-    \ 'a'    : [ promptline#slices#host() ],
+    \ 'a'    : [ '%M' ],
     \ 'b'    : [ promptline#slices#cwd({'dir_limit'    : 1}), promptline#slices#vcs_branch() ],
     \ 'warn' : [ promptline#slices#last_exit_code() ]}
 
@@ -104,7 +105,7 @@ let g:airline#extensions#hunks#non_zero_only = 1 " git gutter
 let g:airline_theme='base16_pop'
 if g:platform == "Linux" || g:platform == "Darwin" || g:platform == "SunOS"
     " Use Patched fonts on Linux and Sun
-    "let g:airline_powerline_fonts = 1
+    let g:airline_powerline_fonts = 1
 endif
 
 " disable dumb separators which need patched font

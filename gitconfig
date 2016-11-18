@@ -15,7 +15,6 @@
         preloadindex = true
         pager = less -R -n -F -X -E
         excludesfile = ~/.gitignore_global
-
 [pager]
         status = true
 [grep]
@@ -26,7 +25,6 @@
         cmd = vim -f -c \"Gvdiff\" \"$MERGED\"
 [merge]
         tool = fugitive
-   
 [pull]
         rebase = true
 [push]
@@ -34,6 +32,7 @@
 [alias]
     br = branch
     ci = commit
+    cia = commit --amend --no-edit
     co = checkout
     st = status
     f = fetch
@@ -45,9 +44,7 @@
     dfs = diff --stat
     dfc = diff --cached
     dfcs = diff --cached --stat
-
     # List aliases
     la = "!git config -l | grep alias | cut -c 7-"
-
 [include]
         path = ~/.gitconfig_local

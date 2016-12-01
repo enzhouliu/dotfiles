@@ -120,7 +120,7 @@ let g:airline_right_sep=''
     " step 2) generate scripts which can run in tmux.conf
     ":TmuxlineSnapshot tmux_prompt.sh
     "
-let g:tmuxline_powerline_separators = 1
+let g:tmuxline_powerline_separators = 0
 let g:tmuxline_theme = 'jellybeans'
 let g:tmuxline_separators = {
     \ 'left': '',
@@ -137,7 +137,7 @@ let g:tmuxline_preset = {
 
 " =========== vimux config and help
 let g:VimuxOrientation = "h"
-let g:VimuxHeight = "20"
+let g:VimuxHeight = "30"
 
 " =========== nerdtree config and help
 if g:platform == "AIX"

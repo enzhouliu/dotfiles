@@ -10,6 +10,7 @@
     ~/.zshrc: zshrc
     ~/.bash: bash/
     ~/.bashrc: bashrc
+    ~/.inputrc: inputrc
     ~/.ycm_extra_conf.py: ycm_extra_conf.py
 
 - shell:

@@ -1,4 +1,4 @@
-"Mappings
+"Vim Key Mappings
 
 "Kill the arrow keys to force practice with hjkl
 "no <up> <Nop>
@@ -9,8 +9,6 @@
 "ino <down> <Nop>
 "ino <left> <Nop>
 "ino <right> <Nop>
-
-
 
 "" ============================================================================
 ""                           Insert Mode Mappings
@@ -91,6 +89,9 @@ nnoremap <leader>ss :source ~/.vim/startup/settings.vim<cr>
 nnoremap <leader>nt :NERDTreeToggle<cr>
 " Open Nerdtree in new tab
 nnoremap <Leader>h :tabnew %:h<CR>
+
+" Visual Search
+vnoremap // y/<C-R>"<CR>
 
 " Paste with shift+ins
 map <S-Insert> <MiddleMouse>

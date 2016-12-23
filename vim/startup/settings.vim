@@ -18,6 +18,10 @@ endif
 set wrapscan
 set incsearch
 set hlsearch
+
+" case insensitive search if the search is all lower case 
+" but if search contains upper case, match upper case only
+set ignorecase
 set smartcase
 
 "" displaying text

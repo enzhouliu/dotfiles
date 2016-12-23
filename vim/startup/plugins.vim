@@ -3,7 +3,7 @@
 " Brief help for Vbundle
 " :PluginList          - list configured plugins
 " :PluginInstall(!)    - install (update) plugins
-" :PluginSearch(!) foo - search (or refresh cache first) for foo
+" :PluginSearch(!)     - search (or refresh cache first) for foo
 " :PluginClean(!)      - confirm (or auto-approve) removal of unused plugins
 "
 " see :h vundle for more details or wiki for FAQ
@@ -43,6 +43,7 @@ Plugin 'luochen1990/rainbow'      " Rainbow parenthesis coloring
 Plugin 'scrooloose/nerdcommenter' " NERDCommenter for easy commenting
 
 Plugin 'majutsushi/tagbar' " Easy Ctag explorer
+Plugin 'tpope/vim-surround'
 
 
 
@@ -71,7 +72,6 @@ endif
 "Plugin 'rhysd/clever-f.vim'
 "Plugin 'tpope/vim-repeat'
 "Plugin 'jlanzarotta/bufexplorer'
-"Plugin 'tpope/vim-surround'
 "Plugin 'tpope/vim-speeddating'
 "Plugin 'tpope/vim-unimpaired'
 "Plugin 'tpope/vim-dispatch'
@@ -175,7 +175,7 @@ let g:gitgutter_realtime = 0
 let g:gitgutter_eager = 0
 let g:gitgutter_max_signs = 1000
 
-" =========== ctrip config and help
+" =========== ctrlp config and help
 set wildignore+=*.so,*.swp,*.zip
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']  " ignore files in .gitignore
 let g:ctrlp_working_path_mode = 'ra'

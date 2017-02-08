@@ -103,10 +103,10 @@ let g:promptline_symbols = {
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#hunks#non_zero_only = 1 " git gutter
 let g:airline_theme='base16_pop'
-if g:platform == "Linux" || g:platform == "Darwin" || g:platform == "SunOS"
+"if g:platform == "Linux" || g:platform == "Darwin" || g:platform == "SunOS"
     " Use Patched fonts on Linux and Sun
-    let g:airline_powerline_fonts = 1
-endif
+    "let g:airline_powerline_fonts = 1
+"endif
 
 " disable dumb separators which need patched font
 let g:airline_left_sep=''
@@ -209,6 +209,11 @@ if g:platform == "Darwin"
     let g:syntastic_cpp_compiler = 'g++'
     let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
 endif
+
+if g:platform == "Linux"
+    let g:syntastic_python_checkers = ['pylint']
+endif
+
 
 " =========== youcompleteme config and help
 "let g:ycm_server_log_level = 'debug'

@@ -7,6 +7,7 @@
     ~/.vim: vim/
     ~/.vimrc: vimrc
     ~/.zsh: zsh/
+    ~/.zgen: zgen/
     ~/.zshrc: zshrc
     ~/.bash: bash/
     ~/.bashrc: bashrc

@@ -13,7 +13,7 @@ if [ -n "$SSH_CONNECTION" ]; then
 fi
 
 # Load antigen
-source ${HOME}/.dotfiles/zgen/zgen.zsh
+source ~/.zgen/zgen.zsh
 
 # check if there's no init script
 if ! zgen saved; then

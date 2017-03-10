@@ -43,7 +43,7 @@ Plugin 'tpope/vim-surround'               " generate surroundings
 
 " Linux-Only plug-ins
 if g:platform == "Linux" || g:platform == "Darwin"
-    Plugin 'Valloric/YouCompleteMe'     " Autocompletion and semantic completion
+    "Plugin 'Valloric/YouCompleteMe'     " Autocompletion and semantic completion
     Plugin 'asenac/vim-airline-loclist' " Show Location list output in airline
     Plugin 'edkolev/promptline.vim'     " Nice airline-like bash prompt
     Plugin 'edkolev/tmuxline.vim'       " Nice airline-like tmux prompt

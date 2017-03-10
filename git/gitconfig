@@ -34,7 +34,7 @@
     ci = commit
     cia = commit --amend --no-edit
     co = checkout
-    cp = cherrypick
+    cp = cherry-pick
     st = status
     f = fetch
     p = pull

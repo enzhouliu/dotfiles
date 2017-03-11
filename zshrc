@@ -5,7 +5,6 @@ if [ -f ~/.zshrc_local_before ]; then
 fi
 
 # External plugins
-
 source ~/.zsh/plugins.zsh
 
 # Settings

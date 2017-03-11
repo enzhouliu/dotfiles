@@ -207,6 +207,7 @@ if g:platform == "Darwin"
 endif
 
 if g:platform == "Linux" || g:platform == "Darwin"
+    let g:syntastic_cpp_checkers = ['gcc']
     let g:syntastic_python_checkers = ['pylint']
     let g:syntastic_shell_checkers = ['shellcheck']
 endif
@@ -216,7 +217,8 @@ endif
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_always_populate_location_list = 1
-let g:ycm_global_ycm_extra_conf = '~/.ycm_default_conf.py'
+let g:ycm_global_ycm_extra_conf = '~/.ycm_default_conf.py
+let g:ycm_show_diagnostics_ui = 0  " this ensures that syntastic gcc checker can be used
 
 " =========== snippets config and help
 let g:UltiSnipsExpandTrigger="<c-j>"

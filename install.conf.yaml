@@ -12,6 +12,7 @@
     ~/.bash: bash/
     ~/.bashrc: bashrc
     ~/.inputrc: inputrc
+    ~/.clang-format: clang-format
     ~/.ycm_extra_conf.py: ycm_extra_conf.py
 
 - shell:

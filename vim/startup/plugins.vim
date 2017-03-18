@@ -180,10 +180,12 @@ let g:ctrlp_custom_ignore = {
   \ }
 
 " =========== clang-format config and help
+let g:clang_format#detect_style_file = 1
+let g:clang_format#auto_formatexpr = 1
+autocmd FileType c,cpp,objc setlocal textwidth=0
 " map to <Leader>cf in C++ code
 autocmd FileType c,cpp,objc nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
 autocmd FileType c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<CR>
-"autocmd FileType c,cpp,objc map <buffer><Leader>x <Plug>(operator-clang-format)
 autocmd FileType python nnoremap <buffer><Leader>cf :<C-u>pyf /usr/local/bin/clang-format.py<CR>
 autocmd FileType python inoremap <Leader>cf <ESC>:pyf /usr/local/bin/clang-format.py<CR>i
 

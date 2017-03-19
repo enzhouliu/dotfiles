@@ -37,7 +37,7 @@ imap <silent> <F3> <c-o>:set nohlsearch!<CR>
 nnoremap <F4> :call ToggleSyntax()<CR>
 
 " Switch between conventional/relative numbering
-nnoremap <F5> :call ToggleNumbering()<CR>
+nnoremap <F5> :CtrlPClearCache<CR>
 
 " Expand Tab Toggle
 nn <F6> :set expandtab!<CR>

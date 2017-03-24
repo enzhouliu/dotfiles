@@ -1,8 +1,13 @@
 " Functions
 
-function TrimWhitespace()
-  %s/\s\+$//e
-  ''
+function! StripTabsAndTrailingWhitespaces()
+    exec "normal ms"
+    let _s=@/
+    retab
+    %s/^M//ge
+    %s/\s\+$//e
+    let @/=_s
+    exec "normal `s"
 endfunction
 
 " toggle syntax on/off

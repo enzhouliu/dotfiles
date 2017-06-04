@@ -14,3 +14,6 @@
 	path = zgen
 	url = https://github.com/tarjoilija/zgen
         ignore = dirty
+[submodule "fzf"]
+	path = fzf
+	url = https://github.com/junegunn/fzf.git

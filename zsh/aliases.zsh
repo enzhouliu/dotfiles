@@ -1,7 +1,7 @@
 if [[ $(uname) == "Darwin" ]]; then
     alias ls='ls -G'
     alias ll='ls -alt'
-elif
+else
     alias ls='ls --color=auto'
     alias ll='ls -alt --color=auto'
 fi

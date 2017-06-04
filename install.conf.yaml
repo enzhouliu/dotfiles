@@ -2,13 +2,13 @@
 - link:
     ~/.gitconfig: git/gitconfig
     ~/.gitignore_global: git/gitignore_global
-    ~/.tmux.conf: tmux/tmux.conf
     ~/.tmux: tmux/
+    ~/.tmux.conf: tmux/tmux.conf
     ~/.vim: vim/
     ~/.vimrc: vim/vimrc
     ~/.zsh: zsh/
-    ~/.zgen: zgen/
     ~/.zshrc: zsh/zshrc
+    ~/.zgen: zgen/
     ~/.bash: bash/
     ~/.bashrc: bash/bashrc
     ~/.inputrc: inputrc

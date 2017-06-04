@@ -1,6 +1,11 @@
+if [[ $(uname) == "Darwin" ]]; then
+    alias ls='ls -G'
+    alias ll='ls -alt'
+elif
+    alias ls='ls --color=auto'
+    alias ll='ls -alt --color=auto'
+fi
 
-alias ls='ls --color=auto'
-alias ll='ls -lht'
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
@@ -11,16 +16,27 @@ alias mkdir='mkdir -p'
 alias ssh='TERM=xterm ssh'
 alias vi='vim'
 alias g='git'
-
-if [[ $(uname) == "Darwin" ]]; then
-    alias ls='ls -G'
-    alias ll='ls -alt'
-fi
+alias fn='find . -name'
+alias kill='kill -9'
+alias ps='ps aux'
+alias psg='ps aux | grep'
+alias dh='dh -h'
+alias du='du -h'
+alias dud='du -d'
+alias upper="tr '[:lower:]' '[:upper:]'"
 
 function dfu() {
     (
         cd ~/.dotfiles && git pullff && ./install -q
     )
+}
+
+# Turn off all proxies
+function proxyoff()
+{
+        unset {http,https,ftp}_proxy
+        unset {HTTP,HTTPS,FTP}_PROXY
+        unset no_proxy
 }
 
 # Use pip without requiring virtualenv

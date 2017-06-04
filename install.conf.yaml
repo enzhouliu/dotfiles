@@ -1,16 +1,16 @@
 - clean: ['~']
 - link:
-    ~/.gitconfig: gitconfig
-    ~/.gitignore_global: gitignore_global
-    ~/.tmux.conf: tmux.conf
+    ~/.gitconfig: git/gitconfig
+    ~/.gitignore_global: git/gitignore_global
+    ~/.tmux.conf: tmux/tmux.conf
     ~/.tmux: tmux/
     ~/.vim: vim/
-    ~/.vimrc: vimrc
+    ~/.vimrc: vim/vimrc
     ~/.zsh: zsh/
     ~/.zgen: zgen/
-    ~/.zshrc: zshrc
+    ~/.zshrc: zsh/zshrc
     ~/.bash: bash/
-    ~/.bashrc: bashrc
+    ~/.bashrc: bash/bashrc
     ~/.inputrc: inputrc
     ~/.clang-format: clang-format
     ~/.ycm_extra_conf.py: ycm_extra_conf.py

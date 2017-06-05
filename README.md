@@ -1,7 +1,7 @@
-#Dotfiles
-Thanks go to Ben and Mario for the reference
+# Dotfiles
+My dotfiles for bash/zsh/vim/tmux and etc
 
-##Dotfile Installation
+## Dotfile Installation
 
 ```
 > git clone https://github.com/Stanley06/dotfiles.git

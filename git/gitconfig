@@ -37,7 +37,8 @@
     cp = cherry-pick
     st = status
     f = fetch
-    p = pull
+    ps = push
+    pl = pull
     pr = pull --rebase
     r = remote
     rb = rebase

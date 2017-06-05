@@ -57,3 +57,6 @@ bindkey -M viins 'jk' vi-cmd-mode
 
 # Use incremental search
 bindkey "^R" history-incremental-search-backward
+
+# setup fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

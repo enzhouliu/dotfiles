@@ -14,6 +14,9 @@ fi
 # aliases (share the same aliases with zsh)
 source ~/.zsh/aliases.zsh
 
+# set up fzf
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
 # Custom prompt
 # Format the prompt
 #function EXT_COLOR () { echo -ne "\[\033[38;5;$1m\]";COL_COLOR="\[\033[0m\]"; }

@@ -38,6 +38,7 @@
     st = status
     f = fetch
     p = pull
+    pr = pull --rebase
     r = remote
     rb = rebase
     l  = log --decorate

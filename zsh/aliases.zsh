@@ -6,6 +6,7 @@ else
     alias ll='ls -alt --color=auto'
 fi
 
+# aliases
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'

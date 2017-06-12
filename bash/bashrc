@@ -9,7 +9,7 @@ fi
 source ~/.bash/settings.bash
 
 # bootstrap
-#source ~/.zsh/bootstrap.zsh
+source ~/.zsh/bootstrap.zsh
 
 # aliases (share the same aliases with zsh)
 source ~/.zsh/aliases.zsh

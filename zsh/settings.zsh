@@ -1,5 +1,5 @@
 # Initialize completion
-autoload -Uz compinit && compinit
+autoload -Uz compinit && compinit -u -i
 
 # Initialize editing command line
 autoload -U edit-command-line && zle -N edit-command-line
@@ -58,6 +58,16 @@ bindkey -M viins 'jk' vi-cmd-mode
 # Use incremental search
 bindkey "^R" history-incremental-search-backward
 
+# zsh-tmux setup
+export ZSH_TMUX_AUTOSTART=false
+export ZSH_TMUX_AUTOCONNECT=false
+if [ "$TERM" != "screen-256color" ]; then
+    export TERM=xterm-256color
+fi
+
+if [ -n "$SSH_CONNECTION" ]; then
+    export ZSH_TMUX_AUTOSTART=false
+fi
 
 # setup prompt line
 git_branch_info() {
@@ -69,9 +79,6 @@ git_branch_info() {
     fi
 }
 PROMPT='%{$fg[green]%}%n@%m %{$fg[cyan]%}%c%{$fg[yellow]%}$(git_branch_info)%{$reset_color%} $ '
-
-# Custom prompt
-#source ~/.zsh/prompt.zsh
 
 # setup fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

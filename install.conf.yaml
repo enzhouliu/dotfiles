@@ -8,9 +8,11 @@
     ~/.vimrc: vim/vimrc
     ~/.zsh: zsh/
     ~/.zshrc: zsh/zshrc
+    ~/.zshenv: zsh/zshenv
     ~/.zgen: zgen/
     ~/.bash: bash/
     ~/.bashrc: bash/bashrc
+    ~/bin: bin/
     ~/.inputrc: inputrc
     ~/.clang-format: clang-format
     ~/.ycm_extra_conf.py: ycm_extra_conf.py

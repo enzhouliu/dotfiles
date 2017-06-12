@@ -1,17 +1,3 @@
-#################
-#  Zgen setup   #
-#################
-
-export ZSH_TMUX_AUTOSTART=false
-export ZSH_TMUX_AUTOCONNECT=false
-if [ "$TERM" != "screen-256color" ]; then
-    export TERM=xterm-256color
-fi
-
-if [ -n "$SSH_CONNECTION" ]; then
-    export ZSH_TMUX_AUTOSTART=false
-fi
-
 # Load antigen
 source ~/.zgen/zgen.zsh
 
@@ -34,15 +20,15 @@ if ! zgen saved; then
   zgen oh-my-zsh plugins/command-not-found
 
   # Github plugins
-  #zgen load rupa/z
+  zgen load rupa/z
   zgen load zsh-users/zsh-syntax-highlighting
-  zgen load zsh-users/zsh-completions src
+  zgen load zsh-users/zsh-completions
   #zgen load kennethreitz/autoenv
 
   zgen oh-my-zsh plugins/history-substring-search
 
   # Load theme
-  zgen oh-my-zsh themes/ys
+  #zgen oh-my-zsh themes/ys
 
   # Tell antigen that you're done
   zgen save

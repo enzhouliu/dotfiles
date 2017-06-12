@@ -1,8 +1,8 @@
 echo "config bashrc"
 
 # allow local customizations in the ~/.bashrc_local_before file
-if [ -f ~/.bashrc_local_before ]; then
-    source ~/.bashrc_local_before
+if [ -f ~/.bash_local/bashrc_local_before.bash ]; then
+    source ~/.bash_local/bashrc_local_before.bash
 fi
 
 # settings
@@ -15,8 +15,8 @@ source ~/.zsh/bootstrap.zsh
 source ~/.zsh/aliases.zsh
 
 # allow local customizations in the ~/.bashrc_local_after file
-if [ -f ~/.bashrc_local_after ]; then
-    source ~/.bashrc_local_after
+if [ -f ~/.bash_local/bashrc_local_after.bash ]; then
+    source ~/.bash_local/bashrc_local_after.bash
 fi
 
 

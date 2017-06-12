@@ -35,8 +35,22 @@ if [[ -n $(type -t __git_complete) ]]; then
     __git_complete g _git
 fi
 
+# in case bash completion is not installed on ibm machiens
+git_branch_info() {
+    git_prompt_text="$(git symbolic-ref HEAD 2>/dev/null | cut -d'/' -f3)" || ""
+    if [[ -n $git_prompt_text ]]; then
+        echo " <$git_prompt_text>"
+    else
+        echo ""
+    fi
+}
+
 # promptline setup
-PS1='\[\e]0;\u@\h:\w\a\]\[\033[01;32m\]\u@\h\[\033[00m\] \[\033[36m\]\W\[\033[33m\]$(__git_ps1 " <%s>")\[\033[00m\] $ '
+if [[ $(uname) == "AIX" ]]; then
+    PS1='\[\e]0;\u@\h:\w\a\]\[\033[01;32m\]\u@\h\[\033[00m\] \[\033[36m\]\W\[\033[33m\]$(git_branch_info " <%s>")\[\033[00m\] $ '
+else
+    PS1='\[\e]0;\u@\h:\w\a\]\[\033[01;32m\]\u@\h\[\033[00m\] \[\033[36m\]\W\[\033[33m\]$(__git_ps1 " <%s>")\[\033[00m\] $ '
+fi
 
 # set up fzf
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash

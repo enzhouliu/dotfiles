@@ -1,5 +1,5 @@
-if [ -f ~/.zshrc_local_before ]; then
-    source ~/.zshrc_local_before
+if [ -f ~/.zsh_local/zshrc_local_before.zsh ]; then
+    source ~/.zsh_local/zshrc_local_before.zsh
 fi
 
 # External plugins
@@ -14,7 +14,7 @@ source ~/.zsh/bootstrap.zsh
 # Aliases
 source ~/.zsh/aliases.zsh
 
-if [ -f ~/.zshrc_local_after ]; then
-    source ~/.zshrc_local_after
+if [ -f ~/.zsh_local/zshrc_local_after.zsh ]; then
+    source ~/.zsh_local/zshrc_local_after.zsh
 fi
 

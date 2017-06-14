@@ -40,6 +40,7 @@ Plugin 'luochen1990/rainbow'              " Rainbow parenthesis coloring
 Plugin 'scrooloose/nerdcommenter'         " NERDCommenter for easy commenting
 Plugin 'majutsushi/tagbar'                " Easy Ctag explorer
 Plugin 'tpope/vim-surround'               " generate surroundings
+Plugin 'machakann/vim-highlightedyank'    " highlighted the yanked region
 
 " Linux-Only plug-ins
 if g:platform == "Linux" || g:platform == "Darwin"
@@ -232,7 +233,13 @@ let g:UltiSnipsEditSplit="vertical"
 
 " ===========  config and help
 let g:airline#extensions#loclist#enabled = 1
- 
+
+" highlighted yanked region configuration
+"let g:highlightedyank_highlight_duration = 1
+if !has('nvim')
+    map y <Plug>(highlightedyank)
+endif
+
 " ===========  vim-grepper config
 "let g:grepper = {
     "\ 'tools': ['git', 'grep'],

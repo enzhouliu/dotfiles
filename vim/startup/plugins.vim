@@ -31,7 +31,7 @@ Plugin 'vim-airline/vim-airline-themes'   " airline themes
 Plugin 'altercation/vim-colors-solarized' " Colorschemes
 Plugin 'endel/vim-github-colorscheme'     " github color schemes
 Plugin 'flazz/vim-colorschemes'           " vim color schemes
-Plugin 'scrooloose/syntastic'             " Syntax checking
+Plugin 'w0rp/ale'                         " Asynchronized Syntax checking
 Plugin 'DoxygenToolkit.vim'               " Doxygen comments
 Plugin 'derekwyatt/vim-scala'             " scala plugin
 Plugin 'a.vim'                            " Alternate for C/C++ Header/Source navigation
@@ -194,28 +194,18 @@ autocmd FileType python inoremap <Leader>cf <ESC>:pyf /usr/local/bin/clang-forma
 " =========== doxygen config and help
 let g:DoxygenToolkit_authorName="Shijie Li <lishijie0602@gmail.com>"
 
-" =========== syntasticconfig and help
-"if g:platform != "AIX"
-    "let g:syntastic_error_symbol = '✗✗'
-    "let g:syntastic_style_error_symbol = '✠✠'
-    "let g:syntastic_warning_symbol = '∆∆'
-    "let g:syntastic_style_warning_symbol = '≈≈'
-"endif
+" =========== ale
+let g:ale_linters = {
+\    'python': ['pylint'],
+\    'sh': ['shellcheck'],
+\}
 
-"let g:syntastic_check_on_open = 0 " if enabled, vim will show weird color for few seconds
-let g:syntastic_check_on_wq = 1
+let g:ale_sign_error = 'xx'
+let g:ale_sign_warning = '!!'
 
-if g:platform == "Darwin"
-    let g:syntastic_cpp_compiler = 'g++'
-    let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
-endif
-
-if g:platform == "Linux" || g:platform == "Darwin"
-    let g:syntastic_cpp_checkers = ['gcc']
-    let g:syntastic_cpp_check_header = 1
-    let g:syntastic_python_checkers = ['pylint']
-    let g:syntastic_shell_checkers = ['shellcheck']
-endif
+let g:ale_sign_column_always = 1
+nmap <silent> <leader>en <Plug>(ale_previous_wrap)
+nmap <silent> <leader>ep <Plug>(ale_next_wrap)
 
 " =========== youcompleteme config and help
 "let g:ycm_server_log_level = 'debug'

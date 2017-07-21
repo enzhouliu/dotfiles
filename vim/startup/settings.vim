@@ -93,7 +93,7 @@ set cinwords+=for,switch,case
 "" folding
 "set nofoldenable
 set foldmarker={,}
-set foldmethod=syntax
+"set foldmethod=syntax " commented out due to slowness in large files
 set foldlevel=20
 "set foldopen+=jump
 set foldopen=block,hor,insert,jump,mark,percent,quickfix,search,tag,undo

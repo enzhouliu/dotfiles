@@ -41,6 +41,7 @@ Plugin 'scrooloose/nerdcommenter'         " NERDCommenter for easy commenting
 Plugin 'majutsushi/tagbar'                " Easy Ctag explorer
 Plugin 'tpope/vim-surround'               " generate surroundings
 Plugin 'machakann/vim-highlightedyank'    " highlighted the yanked region
+Plugin 'Yggdroot/indentLine'              " indentline
 
 " Linux-Only plug-ins
 if g:platform == "Linux" || g:platform == "Darwin"
@@ -212,3 +213,9 @@ endif
     "\ 'jump': 1,
     "\ }
 "
+" ===========  indentline
+let g:indentLine_enabled = 1
+let g:indentLine_conceallevel = 10
+let g:indentLine_char = '|'
+let g:indentLine_first_char = '¦'
+let g:indentLine_showFirstIndentLevel=1

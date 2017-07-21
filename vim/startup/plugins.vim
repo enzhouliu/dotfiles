@@ -31,7 +31,6 @@ Plugin 'vim-airline/vim-airline-themes'   " airline themes
 Plugin 'altercation/vim-colors-solarized' " Colorschemes
 Plugin 'endel/vim-github-colorscheme'     " github color schemes
 Plugin 'flazz/vim-colorschemes'           " vim color schemes
-"Plugin 'scrooloose/syntastic'             " Syntax checking
 Plugin 'w0rp/ale'                         " Asynchronized Syntax checking
 Plugin 'DoxygenToolkit.vim'               " Doxygen comments
 Plugin 'derekwyatt/vim-scala'             " scala plugin
@@ -74,14 +73,11 @@ endif
 call vundle#end()
 filetype plugin indent on
 
-" =========== vim-airline config and help
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#hunks#non_zero_only = 1 " git gutter
+" =========== vim-airline
 let g:airline_theme='base16_pop'
-"if g:platform == "Linux" || g:platform == "Darwin" || g:platform == "SunOS"
-    " Use Patched fonts on Linux and Sun
-    "let g:airline_powerline_fonts = 1
-"endif
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#loclist#enabled = 1
+let g:airline#extensions#hunks#non_zero_only = 1 " git gutter
 
 " disable dumb separators which need patched font
 let g:airline_left_sep=''
@@ -160,7 +156,7 @@ let g:ctrlp_custom_ignore = {
   \ 'link': 'some_bad_symbolic_links',
   \ }
 
-" =========== clang-format config and help
+" =========== clang-format
 let g:clang_format#detect_style_file = 1
 let g:clang_format#auto_formatexpr = 1
 autocmd FileType c,cpp,objc setlocal textwidth=0
@@ -171,13 +167,15 @@ autocmd FileType python nnoremap <buffer><Leader>cf :<C-u>pyf /usr/local/bin/cla
 autocmd FileType python inoremap <Leader>cf <ESC>:pyf /usr/local/bin/clang-format.py<CR>i
 
 
-" =========== doxygen config and help
+" =========== doxygen
 let g:DoxygenToolkit_authorName="Shijie Li <lishijie0602@gmail.com>"
 
 " =========== ale
 let g:ale_linters = {
-\    'python': ['pylint'],
-\    'sh': ['shellcheck'],
+\    'cpp'    : ['cppcheck'],
+\    'java'   : ['checkstyle'],
+\    'python' : ['pylint'],
+\    'sh'     : ['shellcheck'],
 \}
 
 let g:ale_sign_error = 'xx'
@@ -200,9 +198,6 @@ let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsEditSplit="vertical"
-
-" ===========  config and help
-let g:airline#extensions#loclist#enabled = 1
 
 " highlighted yanked region configuration
 "let g:highlightedyank_highlight_duration = 1

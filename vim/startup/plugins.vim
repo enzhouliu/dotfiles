@@ -31,6 +31,7 @@ Plugin 'vim-airline/vim-airline-themes'   " airline themes
 Plugin 'altercation/vim-colors-solarized' " Colorschemes
 Plugin 'endel/vim-github-colorscheme'     " github color schemes
 Plugin 'flazz/vim-colorschemes'           " vim color schemes
+"Plugin 'scrooloose/syntastic'             " Syntax checking
 Plugin 'w0rp/ale'                         " Asynchronized Syntax checking
 Plugin 'DoxygenToolkit.vim'               " Doxygen comments
 Plugin 'derekwyatt/vim-scala'             " scala plugin
@@ -46,7 +47,6 @@ Plugin 'machakann/vim-highlightedyank'    " highlighted the yanked region
 if g:platform == "Linux" || g:platform == "Darwin"
     "Plugin 'Valloric/YouCompleteMe'     " Autocompletion and semantic completion
     Plugin 'asenac/vim-airline-loclist' " Show Location list output in airline
-    Plugin 'edkolev/promptline.vim'     " Nice airline-like bash prompt
     Plugin 'edkolev/tmuxline.vim'       " Nice airline-like tmux prompt
     Plugin 'SirVer/ultisnips'           " Snippets
     Plugin 'honza/vim-snippets'
@@ -73,26 +73,6 @@ endif
 
 call vundle#end()
 filetype plugin indent on
-
-" =========== promptline config and help
-    " help - store the generated 'file', run it in zshrc
-    " :PromptlineSnapshot [file] [theme] [preset]
-    " for linux: \ 'a'    : [ promptline#slices#host() ],
-    "
-let g:promptline_powerline_symbols = 0
-let g:promptline_theme             = 'jelly'
-let g:promptline_preset            = {
-    \ 'a'    : [ '%M' ],
-    \ 'b'    : [ promptline#slices#cwd({'dir_limit'    : 1}), promptline#slices#vcs_branch() ],
-    \ 'warn' : [ promptline#slices#last_exit_code() ]}
-
-let g:promptline_symbols = {
-    \ 'left'       : '>',
-    \ 'left_alt'   : '>',
-    \ 'dir_sep'    : '/',
-    \ 'truncation' : '...',
-    \ 'vcs_branch' : '-',
-    \ 'space'      : ''}
 
 " =========== vim-airline config and help
 let g:airline#extensions#tabline#enabled = 1

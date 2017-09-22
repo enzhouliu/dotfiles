@@ -18,6 +18,7 @@ if ! zgen saved; then
   #zgen oh-my-zsh plugins/python
   #zgen oh-my-zsh plugins/virtualenv
   zgen oh-my-zsh plugins/command-not-found
+  zgen load zsh-users/zsh-autosuggestions
 
   # Github plugins
   zgen load rupa/z

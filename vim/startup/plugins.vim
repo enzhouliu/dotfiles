@@ -214,7 +214,7 @@ endif
     "\ }
 "
 " ===========  indentline
-let g:indentLine_enabled = 1
+let g:indentLine_enabled = 0
 let g:indentLine_conceallevel = 10
 let g:indentLine_char = '|'
 let g:indentLine_first_char = '¦'

@@ -81,8 +81,9 @@ nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>em :vsplit ~/.vim/startup/mappings.vim<cr>
 nnoremap <leader>es :vsplit ~/.vim/startup/settings.vim<cr>
 nnoremap <leader>ep :vsplit ~/.vim/startup/plugins.vim<cr>
-nnoremap <leader>sv :source $MYVIMRC<cr>
+nnoremap <leader>sv :source ~/.vim/vimrc<cr>
 nnoremap <leader>sm :source ~/.vim/startup/mappings.vim<cr>
+nnoremap <leader>sp :source ~/.vim/startup/plugins.vim<cr>
 nnoremap <leader>ss :source ~/.vim/startup/settings.vim<cr>
 
 "Nerd Tree

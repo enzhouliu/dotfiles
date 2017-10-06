@@ -16,32 +16,33 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'VundleVim/Vundle.vim'             " Let Vundle manage itself
-Plugin 'benmills/vimux'                   " vim and tmux integration
-Plugin 'tpope/vim-fugitive'               " Fugitive Git Wrapper
-Plugin 'christoomey/vim-tmux-navigator'   " Tmux movement mappings
-Plugin 'mhinz/vim-grepper'                " vim/git-grep integration
-Plugin 'airblade/vim-gitgutter'           " Diff signs in gutter for Git index/working diffs
-Plugin 'ctrlpvim/ctrlp.vim'               " ctrlP Plugin
-Plugin 'scrooloose/nerdtree'              " NERDTree for filesystem exploation
-Plugin 'Valloric/ListToggle'              " ListToggle for display of quickfix/location list
-Plugin 'godlygeek/tabular'                " to align by a char
-Plugin 'vim-airline/vim-airline'          " Airline for pretty status/tab lines
-Plugin 'vim-airline/vim-airline-themes'   " airline themes
-Plugin 'altercation/vim-colors-solarized' " Colorschemes
-Plugin 'endel/vim-github-colorscheme'     " github color schemes
-Plugin 'flazz/vim-colorschemes'           " vim color schemes
-Plugin 'w0rp/ale'                         " Asynchronized Syntax checking
-Plugin 'DoxygenToolkit.vim'               " Doxygen comments
-Plugin 'derekwyatt/vim-scala'             " scala plugin
-Plugin 'a.vim'                            " Alternate for C/C++ Header/Source navigation
-Plugin 'rhysd/vim-clang-format'           " Clang format for C/C++/ObjC
-Plugin 'luochen1990/rainbow'              " Rainbow parenthesis coloring
-Plugin 'scrooloose/nerdcommenter'         " NERDCommenter for easy commenting
-Plugin 'majutsushi/tagbar'                " Easy Ctag explorer
-Plugin 'tpope/vim-surround'               " generate surroundings
-Plugin 'machakann/vim-highlightedyank'    " highlighted the yanked region
-Plugin 'Yggdroot/indentLine'              " indentline
+Plugin 'VundleVim/Vundle.vim'               " Let Vundle manage itself
+Plugin 'benmills/vimux'                     " vim and tmux integration
+Plugin 'tpope/vim-fugitive'                 " Fugitive Git Wrapper
+Plugin 'christoomey/vim-tmux-navigator'     " Tmux movement mappings
+Plugin 'mhinz/vim-grepper'                  " vim/git-grep integration
+Plugin 'airblade/vim-gitgutter'             " Diff signs in gutter for Git index/working diffs
+Plugin 'ctrlpvim/ctrlp.vim'                 " ctrlP Plugin
+Plugin 'scrooloose/nerdtree'                " NERDTree for filesystem exploation
+Plugin 'Valloric/ListToggle'                " ListToggle for display of quickfix/location list
+Plugin 'godlygeek/tabular'                  " to align by a char
+Plugin 'vim-airline/vim-airline'            " Airline for pretty status/tab lines
+Plugin 'vim-airline/vim-airline-themes'     " airline themes
+Plugin 'altercation/vim-colors-solarized'   " Colorschemes
+Plugin 'endel/vim-github-colorscheme'       " github color schemes
+Plugin 'flazz/vim-colorschemes'             " vim color schemes
+Plugin 'w0rp/ale'                           " Asynchronized Syntax checking
+Plugin 'DoxygenToolkit.vim'                 " Doxygen comments
+Plugin 'derekwyatt/vim-scala'               " scala plugin
+Plugin 'a.vim'                              " Alternate for C/C++ Header/Source navigation
+Plugin 'rhysd/vim-clang-format'             " Clang format for C/C++/ObjC
+Plugin 'luochen1990/rainbow'                " Rainbow parenthesis coloring
+Plugin 'scrooloose/nerdcommenter'           " NERDCommenter for easy commenting
+Plugin 'majutsushi/tagbar'                  " Easy Ctag explorer
+Plugin 'tpope/vim-surround'                 " generate surroundings
+Plugin 'machakann/vim-highlightedyank'      " highlighted the yanked region
+Plugin 'Yggdroot/indentLine'                " indentline
+Plugin 'JamshedVesuna/vim-markdown-preview' " markdown preview
 
 " Linux-Only plug-ins
 if g:platform == "Linux" || g:platform == "Darwin"
@@ -219,3 +220,9 @@ let g:indentLine_conceallevel = 10
 let g:indentLine_char = '|'
 let g:indentLine_first_char = '¦'
 let g:indentLine_showFirstIndentLevel=1
+
+" markdown preview
+let vim_markdown_preview_github=1
+let vim_markdown_preview_toggle=2
+let vim_markdown_preview_browser='Google Chrome'
+let vim_markdown_preview_hotkey='<C-m>'

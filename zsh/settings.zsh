@@ -58,17 +58,6 @@ bindkey -M viins 'jk' vi-cmd-mode
 # Use incremental search
 bindkey "^R" history-incremental-search-backward
 
-# zsh-tmux setup
-export ZSH_TMUX_AUTOSTART=false
-export ZSH_TMUX_AUTOCONNECT=false
-if [ "$TERM" != "screen-256color" ]; then
-    export TERM=xterm-256color
-fi
-
-if [ -n "$SSH_CONNECTION" ]; then
-    export ZSH_TMUX_AUTOSTART=false
-fi
-
 # setup prompt line
 git_branch_info() {
     git_prompt_text="$(git symbolic-ref HEAD 2>/dev/null | cut -d'/' -f3)" || ""

@@ -1,4 +1,4 @@
-# Load antigen
+# Load zgen
 source ~/.zgen/zgen.zsh
 
 # check if there's no init script

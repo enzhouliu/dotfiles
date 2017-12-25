@@ -1,6 +1,6 @@
 [user]
-	name = Shijie Li
-	email = lishijie0602@gmail.com
+	name = Enzhou Liu
+	email = enzhouliu@gmail.com
 [filter "media"]
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
